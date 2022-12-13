@@ -1,11 +1,13 @@
 # 👩🏻‍💻 Coding Test Practice
-- Data Structure & Algorithms Problems Solving
 - [Problem Solving Patterns](https://github.com/youzysu/leetcode/blob/master/Problem%20Solving%20Patterns.md)
 
 ## Solved Problems List
 ### 🌈 leetcode 
 `easy`
 - [Two Sum](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Two%20Sum.md)
+
+`medium`
+- [Longest Substring Without Repeating Characters](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Longest%20Substring%20Without%20Repeating%20Characters.md)
 
 ### 🎮 programmers 
 `1단계`
