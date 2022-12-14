@@ -9,12 +9,12 @@
 `easy`
 
 - [Two Sum](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Two%20Sum.md)
-- [Palindrome Number]()
+- [Palindrome Number](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Palindrome%20Number.md)
 
 `medium`
 
 - [Longest Substring Without Repeating Characters](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Longest%20Substring%20Without%20Repeating%20Characters.md)
-- [Longest Palindromic Substring]()
+- [Longest Palindromic Substring](https://github.com/youzysu/Coding-Test-Practice/blob/master/leetcode/Longest%20Palindromic%20Substring.md)
 
 ### 🎮 programmers
 
