@@ -97,20 +97,38 @@ var isPalindrome = function (x) {
 
 ## 📌 Solution #03
 
-- without converting the integer to a string
+- Without converting the integer to a string
 
 ```js
 /**
  * @param {number} x
  * @return {boolean}
  */
+var isPalindrome = function (x) {
+  const reversed = reverseNumber(x);
+  return reversed === x;
+};
+
+const reverseNumber = (num) => {
+  let reversed = 0;
+  let temp = num;
+
+  while (temp > 0) {
+    reversed = reversed * 10 + (temp % 10);
+    temp = Math.floor(temp / 10);
+  }
+
+  return reversed;
+};
 ```
 
 ### Complexity
 
-- Time:
-- Space:
+- Time: Runtime 166 ms
+- Space: Memory 50.2 MB 🤢
 
 <br />
 
 ## ✏️ Memo
+
+- 흠.. 무엇이 좋은 Solution일까.. 시간 복잡도, 공간 복잡도로 판단하기 아직 어렵다.
