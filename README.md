@@ -21,4 +21,4 @@
 `1단계`
 
 - [가장 가까운 같은 글자](https://github.com/youzysu/Coding-Test-Practice/blob/master/programmers/%EA%B0%80%EC%9E%A5%20%EA%B0%80%EA%B9%8C%EC%9A%B4%20%EA%B0%99%EC%9D%80%20%EA%B8%80%EC%9E%90.md)
-- [문자열 나누기]()(ing)
+- [문자열 나누기](https://github.com/youzysu/Coding-Test-Practice/blob/master/programmers/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md)
