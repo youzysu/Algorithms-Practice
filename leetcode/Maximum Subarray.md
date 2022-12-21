@@ -76,9 +76,6 @@ const maxSubArrayByLength = (nums, length) => {
 
 ### Result
 
-- Runtime: 105 ms submission
-- Memory: 43.3 MB
-
 <br />
 
 ## 📌 Other Solutions
