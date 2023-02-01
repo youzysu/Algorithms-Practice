@@ -1,21 +1,23 @@
 function solution(board, moves) {
-    const stack = []
-    let answer = 0
-    for (let move of moves) {
-        // move = 1
-        for (let line of board) {
-            if (line[move - 1]) {
-                if (stack[stack.length - 1] === line[move - 1]) {
-                    stack.pop()
-                    answer += 2
-                } else {
-                    stack.push(line[move - 1])
-                }
-                line[move - 1] = 0
-                break;
-            }
-        }
-    }
-    return answer
+  let count = 0;
+  const stack = [];
 
+  moves.forEach((move) => {
+    const index = move - 1;
+
+    for (let line of board) {
+      if (line[index]) {
+        if (line[index] === stack[stack.length - 1]) {
+          stack.pop();
+          count += 2;
+        } else {
+          stack.push(line[index]);
+        }
+        line[index] = 0;
+        return;
+      }
+    }
+  });
+  console.log(count);
+  return count;
 }
