@@ -9,7 +9,6 @@ function solution(s) {
         obj[num] = obj[num] ? obj[num] + 1 : 1
     })
 
-    const entries = Object.entries(obj)
-    entries.sort((a, b) => b[1] - a[1])
+    const entries = Object.entries(obj).sort((a, b) => b[1] - a[1])
     return entries.map((item) => Number(item[0]))
 }
