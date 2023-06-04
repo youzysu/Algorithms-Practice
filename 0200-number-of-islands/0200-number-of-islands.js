@@ -3,45 +3,42 @@
  * @return {number}
  */
 var numIslands = function(grid) {
-    let count = 0
-    // 현재 item 기준으로 주변에 있는 아이템들: 탐색할 좌표
-    const queue = []
-    const bfs = (i, j) => {
-        queue.push([i, j])
+    const x = grid.length
+    const y = grid[0].length
 
-        while (queue.length) {
-            const item = queue.shift()
-            const x = item[0]
-            const y =item[1]
-
-            if (grid[x][y] === '1') {
-                grid[x][y] = '0'
-
-                if (x > 0) {
-                    queue.push([x-1, y])
-                }
-                if (y > 0) {
-                    queue.push([x, y-1])
-                } 
-                if (x < grid.length - 1) {
-                    queue.push([x+ 1, y])
-                }
-                if (y < grid[0].length - 1) {
-                    queue.push([x, y+1])
-                }
-            }
+    let islandCount = 0
+    const dfs = (x, y) => {
+        if (grid[x][y] === '1') {
+            grid[x][y] = '0'
+        } else {
+            return
+        }
+        // 아래
+        if (x < grid.length - 1) {
+            dfs(x + 1, y)
+        }
+        // 오른쪽
+        if (y < grid[x].length - 1) {
+            dfs(x, y + 1)
+        }
+        // 왼쪽
+        if (y > 0) {
+            dfs(x, y - 1)
+        }
+        // 위
+        if (x > 0) {
+            dfs(x - 1, y)
         }
     }
 
-    for (let i =0;i < grid.length; i++) {
-        for (let j =0;j < grid[0].length; j++) {
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < y; j++) {
             if (grid[i][j] === '1') {
-                count += 1
-                bfs(i, j)
+                islandCount += 1
+                dfs(i, j)
             }
-
         }
     }
 
-    return count
+    return islandCount
 };
