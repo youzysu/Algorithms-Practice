@@ -22,8 +22,8 @@ function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
               
     answer = compareTree(root, subRoot)
     
-    if (answer === true) {
-        return true
+    if (answer) {
+        return answer
     }
     
     return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot)
