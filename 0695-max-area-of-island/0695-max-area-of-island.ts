@@ -1,26 +1,31 @@
 function maxAreaOfIsland(grid: number[][]): number {
-    const answer = {count : 0}
+    let max = 0
     const row = grid.length
     const column = grid[0].length
     
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < column; j++) {
-            dfs(grid, i, j, answer)
+            if (grid[i][j] === 1) {
+                max = Math.max(max, dfs(grid, i, j))
+            }
         }
     }
     
-    return answer.count
+    return max
 };
 
-function dfs(grid, i, j, answer, island = {count: 0}) {
-    if (!grid[i] || !grid[i][j]) {
-        return
+function dfs(grid, i, j) {
+    if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] === 0) {
+        return 0
     }
     
-    answer.count = Math.max(answer.count, island.count += grid[i][j])
     grid[i][j] = 0
-    dfs(grid, i, j - 1, answer, island)
-    dfs(grid, i, j + 1, answer, island)
-    dfs(grid, i - 1, j, answer, island)
-    dfs(grid, i + 1, j, answer, island)
+    
+    let island = 1
+    island = island + dfs(grid, i, j+1)
+    island = island + dfs(grid, i, j-1)
+    island = island + dfs(grid, i+1, j)
+    island = island + dfs(grid, i-1, j)
+    
+    return island
 }
